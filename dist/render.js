@@ -1,4 +1,4 @@
-class Renderer{
+class RendererHTML{
     constructor(){
         this.source = $('#template').html();
         this.FrindsTemplate = Handlebars.compile(this.source);

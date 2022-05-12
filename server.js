@@ -21,7 +21,9 @@ app.get('/recipes/:ingredient',function(req,response){
         if (err) {
           throw err;
         }
-        response.send(JSON.parse(data).results)
+        let results = JSON.parse(data).results
+        let Newdata = results.map(Element => {return {ingredients:Element.ingredients , title:Element.title , thumbnail:Element.thumbnail , href:Element.href}})
+        response.send(Newdata)
       });
 })
 const port = 8080 

@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recipe App</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body>
     <div class="NavbarDiv">
-        <input type="text" id="new-location-input" placeholder="Enter :" />
-        <button onclick=search()>Search</button>
+        <input type="text" placeholder="Enter :" />
+        <button onclick=getDataFunction()>Search</button>
     </div>
     <div class="recipes"></div>
     <script id="template" type="text/x-handlebars-template">
         {{#each dataArray}}
             <div class="ShowClass">
-                <a href='{{href}}'>{{href}}</a>
-                <p>{{title}}</p>
-                <img src='{{thumbnail}}'>
+                <p><a href='{{this.href}}'>{{this.title}}</a></p>
+                <img class="img" data-imgurl={{this.thumbnail}} src='{{this.thumbnail}}'>
+                <h2>ingredients :</h2>
                 <ul>
-                    {{#each}}
-                    <li>{{this}}</li>
+                    {{#each this.ingredients}}
+                    <li><a>{{this}}</a></li>
                     {{/each}}
                 </ul>
             </div>
@@ -30,6 +31,7 @@
 
     <script src="./jquery/dist/jquery.js"></script>
     <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="render.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

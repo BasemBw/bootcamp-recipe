@@ -1,12 +1,41 @@
-.wrapper {
+.recipes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 .ShowClass {
-    background-color: blueviolet;
+    background-color:darkorange;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
     text-align: center;
+}
+body{
+    background-color: burlywood;
+}
+input{
+    width: calc(100% - 220px);
+    height: 30px;
+ }
+ button{
+     width: 200px ;
+     height: 35px;
+ }
+ h2{
+     font-family: 'Courier New', Courier, monospace;
+ }
+ a{
+    font-family:'Times New Roman', Times, serif;
+    font-size: medium;
+ }
+ .img{
+     width: 250px;
+     height: 250px;
+     border-radius: 20px;
+ }
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
