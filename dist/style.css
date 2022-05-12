@@ -24,7 +24,7 @@ input{
  h2{
      font-family: 'Courier New', Courier, monospace;
  }
- a{
+ li{
     font-family:'Times New Roman', Times, serif;
     font-size: medium;
  }
@@ -33,7 +33,6 @@ input{
      height: 250px;
      border-radius: 20px;
  }
-
 ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
