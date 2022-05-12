@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="NavbarDiv">
+        <input type="text" id="new-location-input" placeholder="Enter :" />
+        <button onclick=search()>Search</button>
+    </div>
+    <div class="recipes"></div>
+    <script id="template" type="text/x-handlebars-template">
+        {{#each dataArray}}
+            <div class="ShowClass">
+                <a href='{{href}}'>{{href}}</a>
+                <p>{{title}}</p>
+                <img src='{{thumbnail}}'>
+                <ul>
+                    {{#each}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/each}}
+    </script>
+    
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
